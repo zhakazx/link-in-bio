@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Link-in-Bio Lite</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <style>
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .link-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border: 2px solid #000;
+            margin-bottom: 1rem;
+            background: #fff;
+        }
+
+        .preview-frame {
+            border: 3px solid #000;
+            border-radius: 20px;
+            height: 600px;
+            width: 300px;
+            margin: 0 auto;
+            overflow: hidden;
+            background: #f0f0f0;
+            position: sticky;
+            top: 2rem;
+        }
+
+        .action-btn {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.8rem;
+            border: 2px solid #000;
+            cursor: pointer;
+            background: #fff;
+        }
+        
+        .action-btn:hover {
+            background: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="dashboard.html" class="nav-brand">LINK-IN-BIO LITE</a>
+        <div style="display: flex; gap: 1rem;">
+            <a href="dashboard.html" style="font-weight: bold;">LINKS</a>
+            <a href="edit-profile.html">PROFILE</a>
+            <a href="account.html">ACCOUNT</a>
+            <a href="login.html" style="color: var(--accent-color);">LOGOUT</a>
+        </div>
+    </nav>
+
+    <div class="container dashboard-grid">
+        <!-- Main Content: Link Manager -->
+        <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                <h2>MY LINKS</h2>
+            </div>
+
+            <!-- Add Link Form (Hidden by default in real app, shown here for design) -->
+            <div class="card mb-2" style="border-style: dashed;">
+                <h3>ADD NEW</h3>
+                <form>
+                    <div class="input-group">
+                        <input type="text" class="input-control" placeholder="Link Title (e.g. My Portfolio)">
+                    </div>
+                    <div class="input-group">
+                        <input type="url" class="input-control" placeholder="URL (https://...)">
+                    </div>
+                    <button type="submit" class="btn btn-primary">SAVE LINK</button>
+                </form>
+            </div>
+
+            <!-- Link List -->
+            <div class="link-list">
+                <div class="link-item">
+                    <div>
+                        <strong>My Portfolio</strong><br>
+                        <small>https://portfolio.com</small>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <button class="action-btn">EDIT</button>
+                        <button class="action-btn">DEL</button>
+                        <button class="action-btn">↕</button>
+                    </div>
+                </div>
+
+                <div class="link-item">
+                    <div>
+                        <strong>Instagram</strong><br>
+                        <small>https://instagram.com/zhaka</small>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <button class="action-btn">EDIT</button>
+                        <button class="action-btn">DEL</button>
+                        <button class="action-btn">↕</button>
+                    </div>
+                </div>
+
+                <div class="link-item">
+                    <div>
+                        <strong>WhatsApp</strong><br>
+                        <small>https://wa.me/62812345678</small>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <button class="action-btn">EDIT</button>
+                        <button class="action-btn">DEL</button>
+                        <button class="action-btn">↕</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar: Preview -->
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <h3 style="text-align: center; margin-bottom: 1rem;">PREVIEW</h3>
+            <div class="preview-frame">
+                <iframe src="profile.html" style="width: 100%; height: 100%; border: none;"></iframe>
+            </div>
+            <a href="profile.html" target="_blank" class="btn mt-1">OPEN PUBLIC PAGE</a>
+        </div>
+    </div>
+    <script src="../assets/script.js"></script>
+</body>
+</html>

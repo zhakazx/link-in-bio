@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings - Link-in-Bio Lite</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="dashboard.html" class="nav-brand">LINK-IN-BIO LITE</a>
+        <div style="display: flex; gap: 1rem;">
+            <a href="dashboard.html">LINKS</a>
+            <a href="edit-profile.html">PROFILE</a>
+            <a href="account.html" style="font-weight: bold;">ACCOUNT</a>
+            <a href="login.html" style="color: var(--accent-color);">LOGOUT</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="mb-2">ACCOUNT SETTINGS</h2>
+        
+        <div class="card mb-2">
+            <h3>CHANGE PASSWORD</h3>
+            <form>
+                <div class="input-group">
+                    <label for="current-password">Current Password</label>
+                    <input type="password" id="current-password" class="input-control">
+                </div>
+                <div class="input-group">
+                    <label for="new-password">New Password</label>
+                    <input type="password" id="new-password" class="input-control">
+                </div>
+                <button type="submit" class="btn">UPDATE PASSWORD</button>
+            </form>
+        </div>
+
+        <div class="card" style="border-color: red;">
+            <h3 style="color: red;">DANGER ZONE</h3>
+            <p class="mb-1">Once you delete your account, there is no going back. Please be certain.</p>
+            <button class="btn" style="background: red; color: white; border-color: darkred;">DELETE ACCOUNT</button>
+        </div>
+    </div>
+    <script src="../assets/script.js"></script>
+</body>
+</html>
