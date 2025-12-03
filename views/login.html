@@ -3,32 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Link-in-Bio Lite</title>
+    <title>Login - Nominal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-    <div class="container" style="height: 100vh; display: flex; align-items: center; justify-content: center;">
-        <div class="card" style="width: 100%; max-width: 400px;">
-            <h1 style="text-align: center; margin-bottom: 2rem;">LOGIN</h1>
+    <div class="grid-background"></div>
+    
+    <div class="auth-container">
+        <div class="auth-card">
+            <h1 class="auth-title">AUTHENTICATION</h1>
             
             <form action="dashboard.html">
                 <div class="input-group">
-                    <label for="username">Username / Email</label>
-                    <input type="text" id="username" class="input-control" placeholder="Enter your username" required>
+                    <label for="username">Usernme</label>
+                    <input type="text" id="username" class="input-control" placeholder="ENTER USERNAME" required>
                 </div>
                 
                 <div class="input-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" class="input-control" placeholder="Enter your password" required>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" class="input-control" placeholder="ENTER PASSWORD" required>
+                        <button type="button" class="toggle-password-btn" onclick="togglePassword('password', this)">SHOW</button>
+                    </div>
                 </div>
                 
-                <button type="submit" class="btn btn-primary w-full mt-1">ENTER</button>
+                <button type="submit" class="btn-primary w-full mt-1">
+                    LOGIN
+                </button>
             </form>
 
-            <div class="mt-2" style="text-align: center;">
-                <p>Don't have an account?</p>
-                <a href="register.html" style="font-weight: bold;">REGISTER HERE</a>
+            <div class="mt-2 text-center">
+                <p class="mb-1" style="font-size: 0.85rem; color: var(--color-text-secondary);">NO CREDENTIALS?</p>
+                <a href="register.html" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--color-black); text-decoration: underline;">REGISTER NEW USER</a>
             </div>
+
+            <!-- Corner Accents -->
+            <span class="corner-top-left" style="position: absolute; top: 0; left: 0; width: 20px; height: 20px; border-top: 2px solid black; border-left: 2px solid black;"></span>
+            <span class="corner-bottom-right" style="position: absolute; bottom: 0; right: 0; width: 20px; height: 20px; border-bottom: 2px solid black; border-right: 2px solid black;"></span>
         </div>
     </div>
     <script src="../assets/script.js"></script>

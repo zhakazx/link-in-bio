@@ -3,31 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Profile - Link-in-Bio Lite</title>
+    <title>Edit Profile - Nominal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <a href="dashboard.html" class="nav-brand">LINK-IN-BIO LITE</a>
-        <div style="display: flex; gap: 1rem;">
-            <a href="dashboard.html">LINKS</a>
-            <a href="edit-profile.html" style="font-weight: bold;">PROFILE</a>
-            <a href="account.html">ACCOUNT</a>
-            <a href="login.html" style="color: var(--accent-color);">LOGOUT</a>
+    <div class="grid-background"></div>
+    
+    <header class="tech-header">
+        <div class="container">
+            <div class="logo">PROFILE</div>
+            <nav>
+                <a href="dashboard.html">LINKS</a>
+                <a href="edit-profile.html" style="color: var(--color-black); font-weight: 600;">PROFILE</a>
+                <a href="account.html">ACCOUNT</a>
+                <a href="login.html" style="color: var(--color-text-secondary);">LOGOUT</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <div class="container">
-        <h2 class="mb-2">EDIT PROFILE</h2>
+    <main class="container" style="padding-top: 40px; max-width: 600px;">
+        <h2 class="mb-2" style="font-size: 1.5rem; font-weight: 600;">PROFILE CONFIGURATION</h2>
         
-        <div class="card">
+        <div class="tech-card" style="margin-bottom: 2rem;">
             <form>
                 <div class="input-group">
-                    <label>Profile Picture</label>
-                    <div style="display: flex; align-items: center; gap: 1rem;">
-                        <div style="width: 80px; height: 80px; background: #000; border-radius: 50%;"></div>
-                        <button type="button" class="btn">UPLOAD NEW</button>
-                        <button type="button" class="btn" style="border-color: red; color: red;">REMOVE</button>
+                    <label>Avatar Source</label>
+                    <div style="display: flex; align-items: center; gap: 1.5rem;">
+                        <div style="width: 80px; height: 80px; background: #f5f5f5; border: 1px solid #000; display: flex; align-items: center; justify-content: center;">
+                            <span style="font-size: 2rem;">😎</span>
+                        </div>
+                        <div style="display: flex; gap: 10px;">
+                            <button type="button" class="btn-primary" style="padding: 8px 16px; font-size: 0.75rem;">UPLOAD</button>
+                            <button type="button" class="action-btn-danger">REMOVE</button>
+                        </div>
                     </div>
                 </div>
 
@@ -38,23 +49,15 @@
 
                 <div class="input-group">
                     <label for="bio">Bio</label>
-                    <textarea id="bio" class="input-control" rows="4">Digital Creator | Tech Enthusiast</textarea>
+                    <textarea id="bio" class="input-control" rows="4" style="resize: none; overflow: auto;">Digital Creator | Tech Enthusiast</textarea>
                 </div>
 
-                <div class="input-group">
-                    <label>Theme Color</label>
-                    <div style="display: flex; gap: 1rem;">
-                        <div style="width: 40px; height: 40px; background: #fff; border: 3px solid #000; cursor: pointer;"></div>
-                        <div style="width: 40px; height: 40px; background: #ff4d4d; border: 3px solid #000; cursor: pointer;"></div>
-                        <div style="width: 40px; height: 40px; background: #4dff4d; border: 3px solid #000; cursor: pointer;"></div>
-                        <div style="width: 40px; height: 40px; background: #4d4dff; border: 3px solid #000; cursor: pointer;"></div>
-                    </div>
-                </div>
-
-                <button type="submit" class="btn btn-primary mt-1">SAVE CHANGES</button>
+                <button type="submit" class="btn-primary w-full mt-1">SAVE CHANGES</button>
             </form>
+            <!-- Corner Accents -->
+            <span class="corner-top-left" style="position: absolute; top: 0; left: 0; width: 20px; height: 20px; border-top: 2px solid black; border-left: 2px solid black;"></span>
+            <span class="corner-bottom-right" style="position: absolute; bottom: 0; right: 0; width: 20px; height: 20px; border-bottom: 2px solid black; border-right: 2px solid black;"></span>
         </div>
-    </div>
-    <script src="../assets/script.js"></script>
+    </main>
 </body>
 </html>

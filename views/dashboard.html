@@ -3,138 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Link-in-Bio Lite</title>
+    <title>Dashboard - Nominal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/style.css">
-    <style>
-        .dashboard-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 2rem;
-        }
-        
-        @media (max-width: 768px) {
-            .dashboard-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .link-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
-            border: 2px solid #000;
-            margin-bottom: 1rem;
-            background: #fff;
-        }
-
-        .preview-frame {
-            border: 3px solid #000;
-            border-radius: 20px;
-            height: 600px;
-            width: 300px;
-            margin: 0 auto;
-            overflow: hidden;
-            background: #f0f0f0;
-            position: sticky;
-            top: 2rem;
-        }
-
-        .action-btn {
-            padding: 0.25rem 0.5rem;
-            font-size: 0.8rem;
-            border: 2px solid #000;
-            cursor: pointer;
-            background: #fff;
-        }
-        
-        .action-btn:hover {
-            background: #000;
-            color: #fff;
-        }
-    </style>
 </head>
 <body>
-    <nav class="navbar">
-        <a href="dashboard.html" class="nav-brand">LINK-IN-BIO LITE</a>
-        <div style="display: flex; gap: 1rem;">
-            <a href="dashboard.html" style="font-weight: bold;">LINKS</a>
-            <a href="edit-profile.html">PROFILE</a>
-            <a href="account.html">ACCOUNT</a>
-            <a href="login.html" style="color: var(--accent-color);">LOGOUT</a>
+    <div class="grid-background"></div>
+    
+    <header class="tech-header">
+        <div class="container">
+            <div class="logo">DASHBOARD</div>
+            <nav>
+                <a href="dashboard.html" style="color: var(--color-black); font-weight: 600;">LINKS</a>
+                <a href="edit-profile.html">PROFILE</a>
+                <a href="account.html">ACCOUNT</a>
+                <a href="login.html" style="color: var(--color-text-secondary);">LOGOUT</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <div class="container dashboard-grid">
+    <main class="container dashboard-layout">
         <!-- Main Content: Link Manager -->
         <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-                <h2>MY LINKS</h2>
+            <div class="dashboard-header">
+                <h2 style="font-size: 1.5rem; font-weight: 600;">ACTIVE LINKS</h2>
+                <div>
+                <a href="profile.html" target="_blank" class="btn-primary" style="font-size: 0.8rem;">OPEN PUBLIC VIEW</a>
+                </div>
             </div>
 
             <!-- Add Link Form (Hidden by default in real app, shown here for design) -->
-            <div class="card mb-2" style="border-style: dashed;">
-                <h3>ADD NEW</h3>
+            <div class="tech-card mb-2" style="padding: 20px; min-height:auto;">
+                <h3 style="font-family: var(--font-mono); font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase;">// Configure New Link</h3>
                 <form>
                     <div class="input-group">
-                        <input type="text" class="input-control" placeholder="Link Title (e.g. My Portfolio)">
+                        <input type="text" class="input-control" placeholder="LINK TITLE">
                     </div>
                     <div class="input-group">
-                        <input type="url" class="input-control" placeholder="URL (https://...)">
+                        <input type="url" class="input-control" placeholder="DESTINATION URL">
                     </div>
-                    <button type="submit" class="btn btn-primary">SAVE LINK</button>
+                    <button type="submit" class="btn-primary">+ NEW LINK</button>
                 </form>
+                <!-- Corner Accents -->
+            <span class="corner-top-left" style="position: absolute; top: 0; left: 0; width: 20px; height: 20px; border-top: 2px solid black; border-left: 2px solid black;"></span>
+            <span class="corner-bottom-right" style="position: absolute; bottom: 0; right: 0; width: 20px; height: 20px; border-bottom: 2px solid black; border-right: 2px solid black;"></span>
             </div>
 
             <!-- Link List -->
             <div class="link-list">
                 <div class="link-item">
-                    <div>
-                        <strong>My Portfolio</strong><br>
+                    <div class="link-info">
+                        <h4>My Portfolio</h4>
                         <small>https://portfolio.com</small>
                     </div>
                     <div style="display: flex; gap: 0.5rem;">
                         <button class="action-btn">EDIT</button>
                         <button class="action-btn">DEL</button>
-                        <button class="action-btn">↕</button>
                     </div>
                 </div>
 
                 <div class="link-item">
-                    <div>
-                        <strong>Instagram</strong><br>
+                    <div class="link-info">
+                        <h4>Instagram</h4>
                         <small>https://instagram.com/zhaka</small>
                     </div>
                     <div style="display: flex; gap: 0.5rem;">
                         <button class="action-btn">EDIT</button>
                         <button class="action-btn">DEL</button>
-                        <button class="action-btn">↕</button>
                     </div>
                 </div>
 
                 <div class="link-item">
-                    <div>
-                        <strong>WhatsApp</strong><br>
+                    <div class="link-info">
+                        <h4>WhatsApp</h4>
                         <small>https://wa.me/62812345678</small>
                     </div>
                     <div style="display: flex; gap: 0.5rem;">
                         <button class="action-btn">EDIT</button>
                         <button class="action-btn">DEL</button>
-                        <button class="action-btn">↕</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Sidebar: Preview -->
-        <div style="display: flex; flex-direction: column; align-items: center;">
-            <h3 style="text-align: center; margin-bottom: 1rem;">PREVIEW</h3>
-            <div class="preview-frame">
-                <iframe src="profile.html" style="width: 100%; height: 100%; border: none;"></iframe>
+        <div>
+            <div class="device-preview">
+                <div class="device-screen">
+                    <iframe src="profile.html" style="width: 100%; height: 100%; border: none;"></iframe>
+                </div>
             </div>
-            <a href="profile.html" target="_blank" class="btn mt-1">OPEN PUBLIC PAGE</a>
         </div>
-    </div>
-    <script src="../assets/script.js"></script>
+    </main>
 </body>
 </html>
